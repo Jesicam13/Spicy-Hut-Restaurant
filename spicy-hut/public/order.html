@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Food - Spicy Hut</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body class="order-page">
+
+    <header>
+        <a href="index.html" id="logo"><h2><i class="fa-solid fa-bowl-rice"></i>Spicy Hut</h2></a>
+        <nav>
+            <a href="index.html"><i class="fa-solid fa-house"></i>Home</a>
+        </nav>
+    </header>
+
+    <div>
+        <h2 id="ordheading">Orders</h2>
+    </div>
+
+    <div class="order-form">
+        <h3>Place Your Order</h3>
+        <form id="orderForm">
+            <div class="input">
+                <label class="textlabel" for="name">Your Name</label>
+                <input type="text" name="name" id="name" required />
+            </div>
+
+            <div class="input">
+                <label class="textlabel" for="phone">Phone Number</label>
+                <input type="text" name="phone" id="phone" required />
+            </div>
+
+            <div class="input">
+                <label class="textlabel" for="address">Address</label>
+                <textarea name="address" id="address" rows="4" required></textarea>
+            </div>
+
+            <div class="input">
+                <label class="textlabel" for="item">Food Item</label>
+                <input type="text" name="item" id="item" required />
+            </div>
+
+            <div class="input">
+                <label class="textlabel" for="quantity">Quantity</label>
+                <input type="number" name="quantity" id="quantity" min="1" required />
+            </div>
+
+            <div class="btn">
+                <button type="submit">Submit Order</button>
+            </div>
+
+            <p id="orderStatus"></p>
+        </form>
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const form = document.getElementById('orderForm');
+        const orderStatus = document.getElementById('orderStatus');
+
+        form.addEventListener('submit', async function (e) {
+            e.preventDefault();
+            orderStatus.innerText = "Processing your order...";
+            orderStatus.style.color = "blue";
+
+            const data = {
+                name: form.name.value,
+                phone: form.phone.value,
+                address: form.address.value,
+                item: form.item.value,
+                quantity: form.quantity.value
+            };
+
+            try {
+                // Relative path: works both locally (same origin as server.js)
+                // and once deployed, since it doesn't hardcode a host.
+                const response = await fetch('/order', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    orderStatus.innerText = result.message;
+                    orderStatus.style.color = "green";
+                    form.reset();
+                } else {
+                    orderStatus.innerText = result.error || "Order failed";
+                    orderStatus.style.color = "red";
+                }
+            } catch (error) {
+                console.error('Fetch error:', error);
+                orderStatus.innerText = "Network error. Please try again.";
+                orderStatus.style.color = "red";
+            }
+        });
+    });
+    </script>
+
+    <footer>
+        <div class="social-menu">
+            <ul>
+                <li><a href="#" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+            </ul>
+        </div>
+        <div id="copyright">&#169; copyright Spicy Hut</div>
+    </footer>
+</body>
+</html>

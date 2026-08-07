@@ -1,0 +1,288 @@
+:root{
+    --red:crimson;
+    --green:#53BF9D;
+    --yellow:#FFC54D;
+    --white:whitesmoke;
+}
+
+body, h2, h3{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background: linear-gradient(to right, rgb(124, 64, 64), rgb(53, 52, 52));
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: var(--white);
+}
+
+/* ---------- LANDING PAGE ---------- */
+.landing
+{
+    background-image: url("../media/hut.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color:var(--white);
+}
+header a
+{
+    text-decoration: none;
+    color:var(--yellow) ;
+    min-width: 120px;
+}
+header{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1em;
+    row-gap: 1em;
+}
+#logo
+{
+    flex:3;
+    font-size: 1.25em;
+    min-width: 260px;
+}
+nav{
+    flex: 2;
+    display: flex;
+    align-items: center;
+}
+nav a{
+    flex: 1;
+}
+nav a:hover{
+    color:var(--green);
+}
+header h2 i,nav a i{
+    margin-right: .5em;
+}
+
+.maintext
+{
+  display: flex;
+  flex-direction: column;
+  height:50vh ;
+  justify-content: center;
+  padding: 2em;
+}
+.tagline1
+{
+    color:var(--red);
+    font-size: 2.5em;
+    font-weight: bolder;
+}
+.tagline2
+{
+    color:var(--yellow);
+    font-size: 2.5em;
+    font-weight: bolder;
+}
+.maintext div
+{
+    margin-top:.75em;
+}
+.maintext button
+{
+  width: 20vw;
+  min-width: 180px;
+  margin-top: 2em;
+  border-radius: 10px;
+  padding:.7em ;
+  background-color: var(--green);
+  color: var(--white);
+  border:1px solid var(--green);
+  cursor: pointer;
+}
+
+/* ---------- MENU ---------- */
+.menu
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+    background: linear-gradient(to right,rgb(100,100,100),rgb(53,52,52));
+    color: var(--white);
+}
+#menuheading,#locheading,#ordheading{
+    background: linear-gradient(to right,rgb(100,100,100),rgb(53,52,52));
+    font-size: 2.5em;
+    color:var(--red);
+    display: flex;
+    justify-content: center;
+}
+.menu th{
+    color:var(--green);
+    font-size: 1.8em;
+     padding: 10px;
+}
+table{
+    width: 100%;
+    padding: 1em;
+}
+.menu tr{
+    display: flex;
+    justify-content: center;
+    margin-top:.8em ;
+}
+.menu td:nth-child(1)
+{
+    flex:1;
+    justify-self: left;
+}
+.menu td:nth-child(2)
+{
+    justify-self: right;
+}
+.maincourse
+{
+    grid-row:span 2;
+}
+
+/* ---------- LOCATIONS ---------- */
+.locations
+{
+    background: linear-gradient(to right,rgb(100,100,100),rgb(53,52,52));
+    color: var(--white);
+    display: flex;
+    flex-wrap: wrap;
+}
+.locations h2{
+    color: var(--green);
+    margin-bottom: .8em;
+}
+.locations div{
+    flex: 1;
+    padding: 1em;
+    min-width: 220px;
+}
+
+/* ---------- FOOTER ---------- */
+footer{
+    background-color: rgb(55,52,53);
+    color:var(--white);
+    padding: .25em 1em;
+    text-align: center;
+}
+.social-menu ul{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 10px 0;
+}
+.social-menu ul li{
+    list-style: none;
+    display:inline-block;
+    margin: 0 15px;
+}
+.social-menu ul li .fab{
+    font-size: 25px;
+    line-height: 40px;
+    transition: .3s;
+    color: #000;
+}
+.social-menu ul li .fab:hover{
+    color: #fff;
+}
+.social-menu ul li a{
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+    text-align: center;
+    transition: .6s;
+    box-shadow: 0 5px 4px rgba(0,0,0,.5);
+}
+.social-menu ul li a:hover{
+    transform: translate(0, -10%);
+}
+.social-menu ul li:nth-child(1) a:hover{
+    background-color: #4267B2;
+}
+.social-menu ul li:nth-child(2) a:hover{
+    background-color: #E4405F;
+}
+.social-menu ul li:nth-child(3) a:hover{
+    background-color: #00ACEE;
+}
+
+/* ---------- ORDER PAGE ---------- */
+.order-page {
+    background-image: url("../media/hut2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+h3 {
+    text-align: center;
+    color: var(--yellow);
+    padding-top: 1em;
+}
+
+.order-form {
+    width: 500px;
+    max-width: 90%;
+    background-color: rgba(0, 0, 0, 0.6);
+    margin: 60px auto;
+    border-radius: 12px;
+    color: var(--white);
+    padding: 30px 25px;
+    font-size: 18px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+}
+
+.textlabel {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.input input,
+.input textarea {
+    width: 100%;
+    font-size: 1.1em;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid var(--green);
+    background-color: #fff;
+}
+
+.input input:focus,
+.input textarea:focus {
+    background-color: #f9eaf7;
+    outline: none;
+}
+
+.btn {
+    text-align: center;
+}
+
+button {
+    font-size: 20px;
+    background-color: var(--green);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: var(--yellow);
+    color: black;
+}
+
+#orderStatus {
+    text-align: center;
+    margin-top: 15px;
+    color: var(--green);
+}
