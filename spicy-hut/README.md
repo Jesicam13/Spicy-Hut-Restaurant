@@ -15,8 +15,8 @@ spicy-hut/
     ├── css/
     │   └── style.css
     └── media/
-        ├── hut.jpg     # ADD THIS: landing page background
-        └── hut2.jpg    # ADD THIS: order page background
+        ├── hut.jpg     #landing page background
+        └── hut2.jpg    # order page background
 ```
 
 ## 1. Add your images
