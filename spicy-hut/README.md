@@ -1,8 +1,4 @@
 # Spicy Hut
-
-Restaurant landing page + working order form, backed by a small Node.js/Express server.
-
-
 ### Landing Page
 ![Landing Page](spicy-hut/Screenshots/Landingpage.png)
 
@@ -11,6 +7,10 @@ Restaurant landing page + working order form, backed by a small Node.js/Express 
 
 ### Order Page
 ![Order Page](spicy-hut/Screenshots/Order.png)
+Restaurant landing page + working order form, backed by a small Node.js/Express server.
+
+
+
 ## Project structure
 
 ```
