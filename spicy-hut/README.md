@@ -1,7 +1,7 @@
 # Spicy Hut
 
 Restaurant landing page + working order form, backed by a small Node.js/Express server.
-## Screenshots
+
 
 ### Landing Page
 ![Landing Page](spicy-hut/Screenshots/Landingpage.png)
