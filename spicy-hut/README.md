@@ -4,13 +4,13 @@ Restaurant landing page + working order form, backed by a small Node.js/Express 
 ## Screenshots
 
 ### Landing Page
-![Landing Page](Screenshots/Landingpage.png)
+![Landing Page](spicy-hut/Screenshots/Landingpage.png)
 
 ### Menu And Locations
-![Menu](Screenshots/Menu.png)
+![Menu](spicy-hut/Screenshots/Menu.png)
 
 ### Order Page
-![Order Page](Screenshots/Order.png)
+![Order Page](spicy-hut/Screenshots/Order.png)
 ## Project structure
 
 ```
