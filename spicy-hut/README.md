@@ -1,7 +1,16 @@
 # Spicy Hut
 
 Restaurant landing page + working order form, backed by a small Node.js/Express server.
+## Screenshots
 
+### Landing Page
+![Landing Page](Screenshots/Landingpage.png)
+
+### Menu And Locations
+![Menu](Screenshots/Menu.png)
+
+### Order Page
+![Order Page](Screenshots/Order.png)
 ## Project structure
 
 ```
